@@ -3852,6 +3852,6 @@ export const API_LIST = {
             '/proxies/v8/assessment/savepoint',
             '/proxies/v8/playList/v2/create',
             '/proxies/v8/playList/v2/update',
-            '/proxies/v8/playList/read/:id/:playListId/:orgId'
+            '/proxies/v8/playList/read/:id/:playListId/:orgId',
            ],
 }
