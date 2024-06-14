@@ -3389,6 +3389,33 @@ export const API_LIST = {
                 ROLE.PUBLIC,
             ],
         },
+        '/proxies/v8/playList/v2/create': {
+            checksNeeded: [CHECK.ROLE],
+            // tslint:disable-next-line: object-literal-sort-keys
+            ROLE_CHECK: [
+                ROLE.SPV_ADMIN,
+                ROLE.MDO_ADMIN,
+                ROLE.MDO_LEADER,
+                ROLE.SPV_PUBLISHER,
+            ],
+        },
+        '/proxies/v8/playList/v2/update': {
+            checksNeeded: [CHECK.ROLE],
+            // tslint:disable-next-line: object-literal-sort-keys
+            ROLE_CHECK: [
+                ROLE.SPV_ADMIN,
+                ROLE.MDO_ADMIN,
+                ROLE.MDO_LEADER,
+                ROLE.SPV_PUBLISHER,
+            ],
+        },
+        '/proxies/v8/playList/read/:id/:playListId/:orgId': {
+            checksNeeded: [CHECK.ROLE],
+            // tslint:disable-next-line: object-literal-sort-keys
+            ROLE_CHECK: [
+                ROLE.PUBLIC,
+            ],
+        },
     },
     URL_PATTERN:
         [
@@ -3823,5 +3850,8 @@ export const API_LIST = {
             '/proxies/v8/announcements/v1/read/:id',
             '/proxies/v8/announcements/v1/delete/:id',
             '/proxies/v8/assessment/savepoint',
+            '/proxies/v8/playList/v2/create',
+            '/proxies/v8/playList/v2/update',
+            '/proxies/v8/playList/read/:id/:playListId/:orgId'
            ],
 }
