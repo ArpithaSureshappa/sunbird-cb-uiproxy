@@ -3187,6 +3187,7 @@ export const API_LIST = {
                 ROLE.MDO_ADMIN,
                 ROLE.MDO_LEADER,
                 ROLE.SPV_PUBLISHER,
+                ROLE.CONTENT_CREATOR,
             ],
         },
         '/proxies/v8/playList/search': {
@@ -3407,6 +3408,7 @@ export const API_LIST = {
                 ROLE.MDO_ADMIN,
                 ROLE.MDO_LEADER,
                 ROLE.SPV_PUBLISHER,
+                ROLE.CONTENT_CREATOR,
             ],
         },
         '/proxies/v8/playList/read/:id/:playListId/:orgId': {
