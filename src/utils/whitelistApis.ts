@@ -3422,7 +3422,9 @@ export const API_LIST = {
             checksNeeded: [CHECK.ROLE],
             // tslint:disable-next-line: object-literal-sort-keys
             ROLE_CHECK: [
-              ROLE.PUBLIC,
+              ROLE.SPV_ADMIN,
+              ROLE.MDO_ADMIN,
+              ROLE.CBP_ADMIN,
             ],
         },
         '/proxies/v8/cios/v1/content/read/:contentId': {
@@ -3443,7 +3445,9 @@ export const API_LIST = {
             checksNeeded: [CHECK.ROLE],
             // tslint:disable-next-line: object-literal-sort-keys
             ROLE_CHECK: [
-              ROLE.PUBLIC,
+              ROLE.SPV_ADMIN,
+              ROLE.MDO_ADMIN,
+              ROLE.CBP_ADMIN,
             ],
         },
     },
