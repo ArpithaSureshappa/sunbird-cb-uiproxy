@@ -3468,6 +3468,13 @@ export const API_LIST = {
               ROLE.CBP_ADMIN,
             ],
         },
+        '/proxies/v8/ciosIntegration/v1/loadContentProgressFromExcel': {
+            checksNeeded: [CHECK.ROLE],
+            // tslint:disable-next-line: object-literal-sort-keys
+            ROLE_CHECK: [
+              ROLE.PUBLIC,
+            ],
+        },
     },
     URL_PATTERN:
         [
@@ -3910,6 +3917,7 @@ export const API_LIST = {
             '/proxies/v8/cios/v1/search/content',
             '/proxies/v8/cios/v1/content/delete/:contentId',
             '/proxies/v8/ciosIntegration/v1/loadContentFromExcel',
-            '/proxies/v8/ciosIntegration/v1/readAllContentFromDb'
+            '/proxies/v8/ciosIntegration/v1/readAllContentFromDb',
+            '/proxies/v8/ciosIntegration/v1/loadContentProgressFromExcel',
            ],
 }
