@@ -3742,6 +3742,13 @@ export const API_LIST = {
                         ROLE.PUBLIC,
                     ],
          },
+        '/proxies/v8/ciosIntegration/v1/loadContentProgressFromExcel': {
+                    checksNeeded: [CHECK.ROLE],
+                    // tslint:disable-next-line: object-literal-sort-keys
+                    ROLE_CHECK: [
+                      ROLE.PUBLIC,
+                    ],
+        },
     },
     URL_PATTERN:
         [
@@ -4226,6 +4233,7 @@ export const API_LIST = {
             '/proxies/v8/mentoring/v1/feedback/submit/:id',
             '/proxies/v8/mentoring/v1/cloud-services/getSignedUrl',
             '/proxies/v8/mentoring/v1/mentees/sessions',
-            '/proxies/v8/mentoring/v1/users/list',,
+            '/proxies/v8/mentoring/v1/users/list',
+            '/proxies/v8/ciosIntegration/v1/loadContentProgressFromExcel',
            ],
 }
