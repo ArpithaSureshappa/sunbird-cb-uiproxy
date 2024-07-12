@@ -3742,6 +3742,34 @@ export const API_LIST = {
                         ROLE.PUBLIC,
                     ],
          },
+        '/proxies/v8/ciosIntegration/v1/loadContentProgressFromExcel': {
+                    checksNeeded: [CHECK.ROLE],
+                    // tslint:disable-next-line: object-literal-sort-keys
+                    ROLE_CHECK: [
+                      ROLE.PUBLIC,
+                    ],
+        },
+        '/proxies/v8/cios-enroll/v1/create': {
+                    checksNeeded: [CHECK.ROLE],
+                    // tslint:disable-next-line: object-literal-sort-keys
+                    ROLE_CHECK: [
+                      ROLE.PUBLIC,
+                    ],
+        },
+        '/proxies/v8/cios-enroll/v1/listbyuserid/:id': {
+                    checksNeeded: [CHECK.ROLE],
+                    // tslint:disable-next-line: object-literal-sort-keys
+                    ROLE_CHECK: [
+                      ROLE.PUBLIC,
+                    ],
+        },
+        '/proxies/v8/cios-enroll/v1/readby/useridcourseId/:userId/:courseId': {
+                    checksNeeded: [CHECK.ROLE],
+                    // tslint:disable-next-line: object-literal-sort-keys
+                    ROLE_CHECK: [
+                      ROLE.PUBLIC,
+                    ],
+        },
     },
     URL_PATTERN:
         [
@@ -4226,6 +4254,10 @@ export const API_LIST = {
             '/proxies/v8/mentoring/v1/feedback/submit/:id',
             '/proxies/v8/mentoring/v1/cloud-services/getSignedUrl',
             '/proxies/v8/mentoring/v1/mentees/sessions',
-            '/proxies/v8/mentoring/v1/users/list',,
+            '/proxies/v8/mentoring/v1/users/list',
+            '/proxies/v8/ciosIntegration/v1/loadContentProgressFromExcel',
+            '/proxies/v8/cios-enroll/v1/create',
+            '/proxies/v8/cios-enroll/v1/listbyuserid/:id',
+            '/proxies/v8/cios-enroll/v1/readby/useridcourseId/:userId/:courseId',
            ],
 }
