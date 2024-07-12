@@ -1035,6 +1035,6 @@ proxiesV8.use('/ext-forms/*',
   proxyCreatorForms(express.Router())
 )
 
-proxiesV8.use('/enrollment/*',
+proxiesV8.use('/cios-enrollment/*',
   proxyCreatorSunbird(express.Router(), `${CONSTANTS.KONG_API_BASE}`)
 )
