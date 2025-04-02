@@ -2737,7 +2737,7 @@ export const API_LIST = {
            ],
         },
 
-        '/proxies/v8/sunbirdigot/v4/search': {
+        '/proxies/v8/sunbirdtest/v4/search': {
             checksNeeded: [CHECK.ROLE],
             // tslint:disable-next-line: object-literal-sort-keys
             ROLE_CHECK: [
@@ -5828,7 +5828,7 @@ export const API_LIST = {
             '/proxies/v8/storage/v1/spvReportInfo/:date',
             '/proxies/v8/ehrms/details',
             '/proxies/v8/wheebox/read',
-            '/proxies/v8/sunbirdigot/v4/search',
+            '/proxies/v8/sunbirdtest/v4/search',
             '/proxies/v8/user/v1/content/recommend',
             '/proxies/v8/program/v2/admin/bulkEnroll',
             '/proxies/v8/operationalreports/admin/grantaccess',
