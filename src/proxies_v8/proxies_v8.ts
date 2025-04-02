@@ -186,7 +186,7 @@ proxiesV8.use('/contentsearch/*',
   proxyCreatorSunbirdSearch(express.Router(), `${CONSTANTS.KONG_API_BASE}/content/v1/search`)
 )
 
-proxiesV8.use('/sunbirdigot/v4/*',
+proxiesV8.use('/sunbirdtest/v4/*',
   // tslint:disable-next-line: max-line-length
   proxyCreatorSunbirdSearch(express.Router(), `${CONSTANTS.KONG_API_BASE}/composite/v4/search`)
 )
