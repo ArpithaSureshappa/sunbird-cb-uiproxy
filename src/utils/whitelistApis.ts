@@ -6790,7 +6790,7 @@ export const API_LIST = {
                 ROLE.SPV_PUBLISHER,
             ],
         },
-        '/proxies/v8/contentpartner/register/v1/update': {
+        '/proxies/v8/contentpartner/register/update': {
             checksNeeded: [CHECK.ROLE],
             // tslint:disable-next-line: object-literal-sort-keys
             ROLE_CHECK: [
@@ -6799,7 +6799,7 @@ export const API_LIST = {
                 ROLE.SPV_PUBLISHER,
             ],
         },
-        '/proxies/v8/contentpartner/register/v1/read/:id': {
+        '/proxies/v8/contentpartner/register/read/:id': {
             checksNeeded: [CHECK.ROLE],
             // tslint:disable-next-line: object-literal-sort-keys
             ROLE_CHECK: [
@@ -6808,7 +6808,7 @@ export const API_LIST = {
                 ROLE.SPV_PUBLISHER,
             ],
         },
-        '/proxies/v8/contentpartner/register/v1/search': {
+        '/proxies/v8/contentpartner/register/search': {
             checksNeeded: [CHECK.ROLE],
             // tslint:disable-next-line: object-literal-sort-keys
             ROLE_CHECK: [
@@ -7681,8 +7681,8 @@ export const API_LIST = {
             '/proxies/v8/sso/create/:id',
             '/proxies/v8/sso/update/:id',
             '/proxies/v8/sso/read/:id',
-            '/proxies/v8/contentpartner/register/v1/update',
-            '/proxies/v8/contentpartner/register/v1/read/:id',
-            '/proxies/v8/contentpartner/register/v1/search',
+            '/proxies/v8/contentpartner/register/update',
+            '/proxies/v8/contentpartner/register/read/:id',
+            '/proxies/v8/contentpartner/register/search',
             ],
 }
