@@ -6,6 +6,7 @@ import { logError } from '../utils/logger'
 import { proxyCreatorRoute } from '../utils/proxyCreator'
 import { redis } from '../utils/redis'
 import { chatBotTranscoderAPIIntegration } from './chatBotTranscoderAPIIntegration'
+import { ltiCios } from './ltiCios'
 import { ntpcAuth } from './ntpcAuth'
 import { oilAuth } from './oilAuth'
 import { parichayAuth } from './parichayAuth'
@@ -93,6 +94,8 @@ publicApiV8.use('/oil', oilAuth)
 publicApiV8.use('/ntpc', ntpcAuth)
 
 publicApiV8.use('/saml', samlDeeplink)
+
+publicApiV8.use('/lti', ltiCios)
 
 publicApiV8.use('/halloffame/read', proxyCreatorRoute(express.Router(), CONSTANTS.KONG_API_BASE + '/halloffame/read'))
 
