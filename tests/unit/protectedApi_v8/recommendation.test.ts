@@ -3,8 +3,8 @@ jest.mock('axios')
 import axios from 'axios'
 import express from 'express'
 import supertest from 'supertest'
-import { ERROR } from '../../../src/utils/message'
 import { recommendationApi } from '../../../src/protectedApi_v8/recommendation'
+import { ERROR } from '../../../src/utils/message'
 
 const mockedAxios = axios as jest.Mocked<typeof axios>
 const mockedAxiosFn = axios as unknown as jest.Mock

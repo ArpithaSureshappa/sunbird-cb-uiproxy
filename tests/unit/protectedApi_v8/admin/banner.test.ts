@@ -4,8 +4,8 @@ import axios from 'axios'
 import express, { NextFunction, Request, Response } from 'express'
 import fileUpload from 'express-fileupload'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../../src/utils/env'
 import { bannerApi } from '../../../../src/protectedApi_v8/admin/banner'
+import { CONSTANTS } from '../../../../src/utils/env'
 
 const mockedAxios = axios as unknown as { post: jest.Mock; put: jest.Mock }
 

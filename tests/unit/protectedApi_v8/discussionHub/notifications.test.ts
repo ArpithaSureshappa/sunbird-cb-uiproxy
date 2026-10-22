@@ -6,9 +6,9 @@ jest.mock('../../../../src/utils/discussionHub-helper', () => ({
 import axios from 'axios'
 import express, { NextFunction, Request, Response } from 'express'
 import supertest from 'supertest'
+import { notificationsApi } from '../../../../src/protectedApi_v8/discussionHub/notifications'
 import { getUserUIDBySession } from '../../../../src/utils/discussionHub-helper'
 import { CONSTANTS } from '../../../../src/utils/env'
-import { notificationsApi } from '../../../../src/protectedApi_v8/discussionHub/notifications'
 
 const mockedAxios = axios as unknown as { get: jest.Mock }
 const mockedGetUserUIDBySession = getUserUIDBySession as jest.Mock

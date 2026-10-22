@@ -44,8 +44,8 @@ jest.mock('../../../src/protectedApi_v8/workflow-handler', () => ({ workflowHand
 
 import express from 'express'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../src/utils/env'
 import { protectedApiV8 } from '../../../src/protectedApi_v8/protectedApiV8'
+import { CONSTANTS } from '../../../src/utils/env'
 
 function buildApp() {
   const app = express()
