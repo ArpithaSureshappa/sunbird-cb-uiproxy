@@ -1,7 +1,7 @@
 jest.mock('axios', () => {
   const fn = jest.fn()
   // tslint:disable-next-line: no-any
-  ;(fn as any).get = jest.fn()
+  ; (fn as any).get = jest.fn()
   return fn
 })
 
@@ -15,9 +15,9 @@ jest.mock('../../../src/utils/proxyCreator', () => ({
 import axios from 'axios'
 import express from 'express'
 import supertest from 'supertest'
+import { authContent } from '../../../src/authoring/authContent'
 import { CONSTANTS } from '../../../src/utils/env'
 import { createPooledProxy } from '../../../src/utils/proxyCreator'
-import { authContent } from '../../../src/authoring/authContent'
 
 const mockedAxios = axios as unknown as jest.Mock & { get: jest.Mock }
 const mockedWeb = (createPooledProxy as jest.Mock).mock.results[0].value.web as jest.Mock

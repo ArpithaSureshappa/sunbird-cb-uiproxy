@@ -3,9 +3,9 @@ jest.mock('axios', () => jest.fn())
 import axios from 'axios'
 import express from 'express'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../src/utils/env'
 import { authSearch } from '../../../src/authoring/authSearch'
 import { DEFAULT_META } from '../../../src/authoring/constants/default-meta'
+import { CONSTANTS } from '../../../src/utils/env'
 
 const mockedAxios = axios as unknown as jest.Mock
 

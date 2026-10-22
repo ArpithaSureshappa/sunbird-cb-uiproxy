@@ -4,9 +4,9 @@ jest.mock('../../../src/utils/proxyCreator', () => ({
 
 import express from 'express'
 import supertest from 'supertest'
+import { authNotification } from '../../../src/authoring/authNotification'
 import { CONSTANTS } from '../../../src/utils/env'
 import { createPooledProxy } from '../../../src/utils/proxyCreator'
-import { authNotification } from '../../../src/authoring/authNotification'
 
 const mockedWeb = (createPooledProxy as jest.Mock).mock.results[0].value.web as jest.Mock
 

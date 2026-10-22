@@ -1,5 +1,5 @@
-import { CONSTANTS } from '../../../src/utils/env'
 import { cassandraClientOptions } from '../../../src/configs/cassandra.config'
+import { CONSTANTS } from '../../../src/utils/env'
 
 describe('cassandraClientOptions', () => {
   it('splits the configured CASSANDRA_IP into contact points', () => {

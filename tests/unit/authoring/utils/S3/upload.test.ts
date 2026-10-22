@@ -1,8 +1,8 @@
 jest.mock('axios', () => ({ post: jest.fn() }))
 
 import axios from 'axios'
-import { CONSTANTS } from '../../../../../src/utils/env'
 import { uploadToS3 } from '../../../../../src/authoring/utils/S3/upload'
+import { CONSTANTS } from '../../../../../src/utils/env'
 
 const mockedAxios = axios as unknown as { post: jest.Mock }
 

@@ -36,8 +36,8 @@ userAuthKeyCloakApi.get('/', (req, res) => {
             httpOnly: true,
             secure: true,
         }
-        res.clearCookie(COOKIE_NAME_NEW, COOKIE_OPTIONS)
-        res.cookie(COOKIE_NAME_NEW, req.cookies[COOKIE_NAME_NEW], { domain, maxAge: CONSTANTS.KEYCLOAK_SESSION_TTL,
+       res.clearCookie(COOKIE_NAME_NEW, COOKIE_OPTIONS)
+       res.cookie(COOKIE_NAME_NEW, req.cookies[COOKIE_NAME_NEW], { domain, maxAge: CONSTANTS.KEYCLOAK_SESSION_TTL,
           sameSite: SAME_SITE_NONE, ...COOKIE_OPTIONS })
 
         // res.cookie('express.sid', req.cookies['express.sid'], {

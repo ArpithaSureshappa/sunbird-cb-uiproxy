@@ -1,9 +1,9 @@
 jest.mock('../../../../../src/authoring/utils/S3/read', () => ({ readFromS3: jest.fn() }))
 jest.mock('../../../../../src/authoring/utils/read-meta-and-json/channel', () => ({ extractChannelData: jest.fn() }))
 
-import { readFromS3 } from '../../../../../src/authoring/utils/S3/read'
 import { extractChannelData } from '../../../../../src/authoring/utils/read-meta-and-json/channel'
 import { extractWebModuleData, readJSONData } from '../../../../../src/authoring/utils/read-meta-and-json/index'
+import { readFromS3 } from '../../../../../src/authoring/utils/S3/read'
 
 const mockedReadFromS3 = readFromS3 as jest.Mock
 const mockedExtractChannelData = extractChannelData as jest.Mock

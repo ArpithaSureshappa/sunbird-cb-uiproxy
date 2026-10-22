@@ -1,5 +1,5 @@
-import { CONSTANTS } from '../../../src/utils/env'
 import { getKeycloakConfig, getOAuthKeycloakConfig } from '../../../src/configs/keycloak.config'
+import { CONSTANTS } from '../../../src/utils/env'
 
 describe('getKeycloakConfig', () => {
   it('falls back to the configured realm and auth server url when none are given', () => {

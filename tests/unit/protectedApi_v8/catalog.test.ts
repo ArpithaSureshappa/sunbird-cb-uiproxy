@@ -7,9 +7,9 @@ jest.mock('../../../src/service/catalog', () => ({
 import axios from 'axios'
 import express, { NextFunction, Request, Response } from 'express'
 import supertest from 'supertest'
-import { getFilterUnitByType, getFilters } from '../../../src/service/catalog'
-import { CONSTANTS } from '../../../src/utils/env'
 import { catalogApi } from '../../../src/protectedApi_v8/catalog'
+import { getFilters, getFilterUnitByType } from '../../../src/service/catalog'
+import { CONSTANTS } from '../../../src/utils/env'
 
 const mockedAxios = axios as unknown as { get: jest.Mock }
 const mockedGetFilters = getFilters as jest.Mock

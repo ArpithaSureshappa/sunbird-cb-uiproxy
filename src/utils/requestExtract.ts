@@ -129,4 +129,3 @@ export const extractQueryParam = (req: Request, paramName: string): string | und
 
   return undefined
 }
-

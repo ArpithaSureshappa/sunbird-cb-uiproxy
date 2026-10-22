@@ -144,7 +144,7 @@ describe('Server', () => {
     __whitelistState.allow = true
     __keycloakAuthState.authenticated = true
     // tslint:disable-next-line: no-any
-    ;(CONSTANTS as any).PORTAL_API_WHITELIST_CHECK = 'true'
+    ; (CONSTANTS as any).PORTAL_API_WHITELIST_CHECK = 'true'
   })
 
   it('mounts the public API router under /public/v8', async () => {
@@ -203,7 +203,7 @@ describe('Server', () => {
   it('skips the whitelist check middleware entirely when PORTAL_API_WHITELIST_CHECK is disabled', async () => {
     __whitelistState.allow = false
     // tslint:disable-next-line: no-any
-    ;(CONSTANTS as any).PORTAL_API_WHITELIST_CHECK = 'false'
+    ; (CONSTANTS as any).PORTAL_API_WHITELIST_CHECK = 'false'
     // tslint:disable-next-line: no-any
     const instance: any = buildServerInstance()
     const res = await supertest(instance.app).get('/public/v8/ping')

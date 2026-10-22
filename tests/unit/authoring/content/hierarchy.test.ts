@@ -1,8 +1,8 @@
 jest.mock('axios', () => ({ get: jest.fn(), post: jest.fn() }))
 
 import axios from 'axios'
-import { CONSTANTS } from '../../../../src/utils/env'
 import { getHierarchy, getHierarchyV2, getMultipleHierarchyV2 } from '../../../../src/authoring/content/hierarchy'
+import { CONSTANTS } from '../../../../src/utils/env'
 
 const mockedAxios = axios as unknown as { get: jest.Mock; post: jest.Mock }
 

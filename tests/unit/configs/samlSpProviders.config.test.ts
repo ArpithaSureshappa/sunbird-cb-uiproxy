@@ -1,5 +1,5 @@
-import { CONSTANTS } from '../../../src/utils/env'
 import { buildIgotSpLink } from '../../../src/configs/samlSpProviders.config'
+import { CONSTANTS } from '../../../src/utils/env'
 
 describe('buildIgotSpLink', () => {
   it('builds a Keycloak authorization URL with the expected fixed params', () => {

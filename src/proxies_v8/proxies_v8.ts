@@ -956,7 +956,7 @@ proxiesV8.post('/program/v2/batch/getParticipants', async (req, res) => {
     const activeTrueCount = response.data.result.batch.activeCount != null ? response.data.result.batch.activeCount : 0
     const activeFalseCount = response.data.result.batch.inactiveCount != null ? response.data.result.batch.inactiveCount : 0
 
-    const participants = response.data?.result?.batch?.participants ?? []
+    const participants = response.data ? .result ? .batch ? .participants ? ? [] 
     if (participants && participants.length > 0) {
       const activeStatusMap: { [key: string]: boolean } = {}
       const userIds: string[] = []
@@ -1483,7 +1483,6 @@ export interface ICohortsUserBP {
   city: string,
   active: boolean
 }
-
 
 proxiesV8.use('/ext-forms/*',
   // tslint:disable-next-line: max-line-length

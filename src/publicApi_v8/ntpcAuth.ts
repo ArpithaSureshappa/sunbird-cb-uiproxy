@@ -8,8 +8,8 @@ import { CONSTANTS } from '../utils/env'
 import { getCurrnetExpiryTime } from '../utils/jwtHelper'
 import { logDebug, logError } from '../utils/logger'
 import { redis } from '../utils/redis'
-import { createUserWithMailId, fetchUserByEmailId, updateKeycloakSession } from './ssoUserHelper'
 import { extractQueryParam } from '../utils/requestExtract'
+import { createUserWithMailId, fetchUserByEmailId, updateKeycloakSession } from './ssoUserHelper'
 
 export const ntpcAuth = express.Router()
 
