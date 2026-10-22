@@ -4,9 +4,9 @@ jest.mock('../../../../src/protectedApi_v8/content', () => ({ getMultipleContent
 import axios from 'axios'
 import express from 'express'
 import supertest from 'supertest'
-import { ERROR } from '../../../../src/utils/message'
 import { getMultipleContent } from '../../../../src/protectedApi_v8/content'
 import { fetchLikedIdsResponse, userContentApi } from '../../../../src/protectedApi_v8/user/content'
+import { ERROR } from '../../../../src/utils/message'
 
 const mockedAxios = axios as jest.Mocked<typeof axios>
 const mockedAxiosFn = axios as unknown as jest.Mock

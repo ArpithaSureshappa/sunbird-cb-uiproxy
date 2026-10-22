@@ -20,9 +20,9 @@ jest.mock('../../../src/publicApi_v8/keycloakHelper', () => ({
   getKeyCloakClient: jest.fn(),
 }))
 
-import { CONSTANTS } from '../../../src/utils/env'
 import { createConnection, createSession, getGoogleProfile, getQueryParams } from '../../../src/publicApi_v8/googleOAuthHelper'
 import { getKeyCloakClient } from '../../../src/publicApi_v8/keycloakHelper'
+import { CONSTANTS } from '../../../src/utils/env'
 
 // tslint:disable-next-line: no-var-requires
 const { __mockOAuth2Ctor, __mockOAuth2Instance, __mockOauth2Api } = require('googleapis')

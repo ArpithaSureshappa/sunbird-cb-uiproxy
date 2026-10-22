@@ -12,10 +12,10 @@ jest.mock('../../../src/utils/request-adapter', () => ({
   request: { post: jest.fn() },
 }))
 
+import { getKeyCloakClient } from '../../../src/publicApi_v8/keycloakHelper'
 import { CONSTANTS } from '../../../src/utils/env'
 import { PERMISSION_HELPER } from '../../../src/utils/permissionHelper'
 import { request } from '../../../src/utils/request-adapter'
-import { getKeyCloakClient } from '../../../src/publicApi_v8/keycloakHelper'
 
 const mockedGetCurrentUserRoles = PERMISSION_HELPER.getCurrentUserRoles as jest.Mock
 const mockedRequestPost = request.post as jest.Mock

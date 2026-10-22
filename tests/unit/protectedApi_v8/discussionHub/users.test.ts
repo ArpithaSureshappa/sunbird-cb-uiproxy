@@ -7,8 +7,8 @@ jest.mock('../../../../src/utils/discussionHub-helper', () => ({
 import axios from 'axios'
 import express from 'express'
 import supertest from 'supertest'
-import { getUserSlug, getUserUIDBySession } from '../../../../src/utils/discussionHub-helper'
 import { getUserByEmail, getUserByUsername, usersApi } from '../../../../src/protectedApi_v8/discussionHub/users'
+import { getUserSlug, getUserUIDBySession } from '../../../../src/utils/discussionHub-helper'
 
 const mockedAxios = axios as jest.Mocked<typeof axios>
 const mockedGetUserSlug = getUserSlug as jest.Mock

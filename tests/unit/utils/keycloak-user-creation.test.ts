@@ -47,13 +47,13 @@ const { __mockKcClient } = require('@keycloak/keycloak-admin-client')
 const mockedRequest = require('request')
 
 import {
-  UpdateKeycloakUserPassword,
-  checkUUIDMaster,
   checkUniqueKey,
+  checkUUIDMaster,
   createKeycloakUser,
   sendActionsEmail,
-  updateUUIDMaster,
+  UpdateKeycloakUserPassword,
   updateUniqueKey,
+  updateUUIDMaster,
 } from '../../../src/utils/keycloak-user-creation'
 
 describe('checkUniqueKey', () => {

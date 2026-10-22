@@ -17,6 +17,7 @@ describe('transformToGoalForOthers', () => {
   it('maps a v1 sb-ext goal to the app-level shape', () => {
     const goal = transformToGoalForOthers({
       content_data: [{ contentType: 'Course', resourceType: 'Video' }],
+      goalProgess: 50,
       goal_content_id: ['c1'],
       goal_desc: 'desc',
       goal_duration: 10,
@@ -25,7 +26,6 @@ describe('transformToGoalForOthers', () => {
       goal_start_date: '2024-01-01',
       goal_title: 'My Goal',
       goal_type: 'user',
-      goalProgess: 50,
       recipient_list: ['u2'],
       resource_progress: [],
       shared_by: 'u1',
@@ -131,11 +131,11 @@ describe('transformResourceProgress', () => {
     const result = transformResourceProgress({
       content_type: 'Course',
       mime_type: 'video/mp4',
+      resourceType: 'Video',
       resource_duration: 100,
       resource_id: 'r1',
       resource_name: 'Res 1',
       resource_progress: 50,
-      resourceType: 'Video',
       time_left: 50,
     } as never)
     expect(result).toEqual({

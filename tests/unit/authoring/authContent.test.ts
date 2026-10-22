@@ -1,6 +1,6 @@
 jest.mock('axios', () => {
   const fn = jest.fn()
-  // tslint:disable-next-line: no-any
+  // tslint:disable-next-line: no-any align
   ; (fn as any).get = jest.fn()
   return fn
 })

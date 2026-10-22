@@ -2,9 +2,9 @@ jest.mock('axios', () => jest.fn())
 jest.mock('../../../src/publicApi_v8/keycloakHelper', () => ({ getKeyCloakClient: jest.fn() }))
 
 import axios from 'axios'
-import { CONSTANTS } from '../../../src/utils/env'
-import { createUserWithMailId, fetchUserByEmailId, updateKeycloakSession } from '../../../src/publicApi_v8/ssoUserHelper'
 import { getKeyCloakClient } from '../../../src/publicApi_v8/keycloakHelper'
+import { createUserWithMailId, fetchUserByEmailId, updateKeycloakSession } from '../../../src/publicApi_v8/ssoUserHelper'
+import { CONSTANTS } from '../../../src/utils/env'
 
 const mockedAxios = axios as unknown as jest.Mock
 const mockedGetKeyCloakClient = getKeyCloakClient as jest.Mock

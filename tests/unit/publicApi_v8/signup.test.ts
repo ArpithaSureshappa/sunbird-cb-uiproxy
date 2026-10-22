@@ -15,15 +15,15 @@ jest.mock('../../../src/utils/keycloak-user-creation', () => ({
 import express from 'express'
 import supertest from 'supertest'
 import { createUser, performNewUserSteps } from '../../../src/protectedApi_v8/admin/userRegistration'
-import {
-  UpdateKeycloakUserPassword,
-  checkUUIDMaster,
-  checkUniqueKey,
-  createKeycloakUser,
-  updateUUIDMaster,
-  updateUniqueKey,
-} from '../../../src/utils/keycloak-user-creation'
 import { getMaskedEmail, getMaskedString, signup } from '../../../src/publicApi_v8/signup'
+import {
+  checkUniqueKey,
+  checkUUIDMaster,
+  createKeycloakUser,
+  UpdateKeycloakUserPassword,
+  updateUniqueKey,
+  updateUUIDMaster,
+} from '../../../src/utils/keycloak-user-creation'
 
 const mockedCheckUniqueKey = checkUniqueKey as jest.Mock
 const mockedCreateKeycloakUser = createKeycloakUser as jest.Mock

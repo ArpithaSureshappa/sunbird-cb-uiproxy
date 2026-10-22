@@ -13,10 +13,10 @@ import axios from 'axios'
 import express, { NextFunction, Request, Response } from 'express'
 import jwt_decode from 'jwt-decode'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../src/utils/env'
-import { redis } from '../../../src/utils/redis'
 import { oilAuth } from '../../../src/publicApi_v8/oilAuth'
 import { createUserWithMailId, fetchUserByEmailId, updateKeycloakSession } from '../../../src/publicApi_v8/ssoUserHelper'
+import { CONSTANTS } from '../../../src/utils/env'
+import { redis } from '../../../src/utils/redis'
 
 const mockedAxios = axios as unknown as jest.Mock
 const mockedJwtDecode = jwt_decode as jest.Mock

@@ -107,7 +107,6 @@ jest.mock('../../src/utils/apiWhiteList', () => {
 jest.mock('../../src/utils/custom-keycloak', () => {
   const authState = { authenticated: true }
   return {
-    __keycloakAuthState: authState,
     CustomKeycloak: jest.fn().mockImplementation(() => ({
       // tslint:disable-next-line: no-any
       middleware: (_req: any, _res: any, next: any) => next(),
@@ -120,6 +119,7 @@ jest.mock('../../src/utils/custom-keycloak', () => {
         }
       },
     })),
+    __keycloakAuthState: authState,
   }
 })
 
@@ -143,7 +143,7 @@ describe('Server', () => {
   afterEach(() => {
     __whitelistState.allow = true
     __keycloakAuthState.authenticated = true
-    // tslint:disable-next-line: no-any
+    // tslint:disable-next-line: no-any align
     ; (CONSTANTS as any).PORTAL_API_WHITELIST_CHECK = 'true'
   })
 
@@ -202,7 +202,7 @@ describe('Server', () => {
 
   it('skips the whitelist check middleware entirely when PORTAL_API_WHITELIST_CHECK is disabled', async () => {
     __whitelistState.allow = false
-    // tslint:disable-next-line: no-any
+    // tslint:disable-next-line: no-any align
     ; (CONSTANTS as any).PORTAL_API_WHITELIST_CHECK = 'false'
     // tslint:disable-next-line: no-any
     const instance: any = buildServerInstance()

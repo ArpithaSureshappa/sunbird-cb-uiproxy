@@ -5,8 +5,8 @@ jest.mock('../../../src/configs/samlSpProviders.config', () => ({
 import express from 'express'
 import supertest from 'supertest'
 import { buildIgotSpLink } from '../../../src/configs/samlSpProviders.config'
-import { CONSTANTS } from '../../../src/utils/env'
 import { samlDeeplink } from '../../../src/publicApi_v8/samlDeeplink'
+import { CONSTANTS } from '../../../src/utils/env'
 
 const mockedBuild = buildIgotSpLink as jest.Mock
 

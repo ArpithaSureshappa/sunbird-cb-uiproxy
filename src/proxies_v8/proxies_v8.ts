@@ -35,9 +35,8 @@ import { jwtUserTokenHelper } from './jwtUserTokenHelper'
 import { lookerDashboard } from './lookerIntegration'
 
 const API_END_POINTS = {
-  batchParticipantsApi: `${CONSTANTS.KONG_API_BASE}/course/v1/batch/participants/list`,
   batchParticipantsAdminApi: `${CONSTANTS.KONG_API_BASE}/course/v1/batch/admin/participants/list`,
-  programBatchParticipantsApi: `${CONSTANTS.KONG_API_BASE}/program/v2/batch/participants/list`,
+  batchParticipantsApi: `${CONSTANTS.KONG_API_BASE}/course/v1/batch/participants/list`,
   contentNotificationEmail: `${CONSTANTS.NOTIFICATION_SERVIC_API_BASE}/v1/notification/send/sync`,
   externalContentbatchParticipantsApi: `${CONSTANTS.KONG_API_BASE}/externaltraining/v1/batch/participants/list`,
   kongExtOrgSearch: `${CONSTANTS.KONG_API_BASE}/org/v1/cb/ext/search`,
@@ -45,6 +44,7 @@ const API_END_POINTS = {
   // tslint:disable-next-line: all
   kongSearchUser: `${CONSTANTS.KONG_API_BASE}/user/v1/search`,
   orgTypeListEndPoint: `${CONSTANTS.KONG_API_BASE}/data/v1/system/settings/get/orgTypeList`,
+  programBatchParticipantsApi: `${CONSTANTS.KONG_API_BASE}/program/v2/batch/participants/list`,
 }
 export const proxiesV8 = express.Router()
 const _ = require('lodash')
@@ -956,7 +956,7 @@ proxiesV8.post('/program/v2/batch/getParticipants', async (req, res) => {
     const activeTrueCount = response.data.result.batch.activeCount != null ? response.data.result.batch.activeCount : 0
     const activeFalseCount = response.data.result.batch.inactiveCount != null ? response.data.result.batch.inactiveCount : 0
 
-    const participants = response.data ? .result ? .batch ? .participants ? ? [] 
+    const participants = response.data.result.batch.participants || []
     if (participants && participants.length > 0) {
       const activeStatusMap: { [key: string]: boolean } = {}
       const userIds: string[] = []
@@ -994,10 +994,10 @@ proxiesV8.post('/program/v2/batch/getParticipants', async (req, res) => {
 
               const user: ICohortsUserBP = {
                 ...existingUser,
-                department: profileObj.rootOrgName,
                 active: profileObj.userId
                   ? activeStatusMap[profileObj.userId]
                   : undefined,
+                department: profileObj.rootOrgName,
               }
 
               userlist.push(user)

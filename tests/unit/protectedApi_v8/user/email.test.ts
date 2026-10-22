@@ -3,8 +3,8 @@ jest.mock('axios', () => ({ post: jest.fn() }))
 import axios from 'axios'
 import express from 'express'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../../src/utils/env'
 import { emailApi } from '../../../../src/protectedApi_v8/user/email'
+import { CONSTANTS } from '../../../../src/utils/env'
 
 const mockedAxios = axios as unknown as { post: jest.Mock }
 

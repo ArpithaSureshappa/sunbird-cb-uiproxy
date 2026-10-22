@@ -8,8 +8,8 @@ jest.mock('axios', () => {
 import axios from 'axios'
 import express, { NextFunction, Request, Response } from 'express'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../../src/utils/env'
 import { shareApi } from '../../../../src/protectedApi_v8/user/share'
+import { CONSTANTS } from '../../../../src/utils/env'
 
 const mockedAxios = axios as unknown as jest.Mock & { post: jest.Mock }
 
@@ -60,9 +60,9 @@ describe('shareApi POST /content', () => {
       .set('org', 'dopt')
       .set('rootOrg', 'Ford')
       .send({
+        recipients: { sharedWith: ['u2'] },
         'tag-value-pair': { '#message': 'hello', '#targetUrl': 'https://x' },
         'target-data': { identifier: 'do_1' },
-        recipients: { sharedWith: ['u2'] },
       })
 
     expect(mockedAxios).toHaveBeenCalledWith(

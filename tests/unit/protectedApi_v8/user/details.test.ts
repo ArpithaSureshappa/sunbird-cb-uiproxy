@@ -16,10 +16,10 @@ jest.mock('../../../../src/protectedApi_v8/discussionHub/writeApi', () => ({
 import axios from 'axios'
 import express, { NextFunction, Request, Response } from 'express'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../../src/utils/env'
 import { getRoles, getUserStatus } from '../../../../src/protectedApi_v8/portal-v3'
 import { detailsApi } from '../../../../src/protectedApi_v8/user/details'
 import { getProfileStatus } from '../../../../src/protectedApi_v8/user/profile-registry'
+import { CONSTANTS } from '../../../../src/utils/env'
 
 const mockedAxios = axios as unknown as { post: jest.Mock }
 const mockedGetRoles = getRoles as jest.Mock

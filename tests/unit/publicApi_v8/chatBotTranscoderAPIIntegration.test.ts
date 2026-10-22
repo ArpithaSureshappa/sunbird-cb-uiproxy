@@ -3,8 +3,8 @@ jest.mock('axios')
 import axios from 'axios'
 import express from 'express'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../src/utils/env'
 import { chatBotTranscoderAPIIntegration } from '../../../src/publicApi_v8/chatBotTranscoderAPIIntegration'
+import { CONSTANTS } from '../../../src/utils/env'
 
 const mockedAxios = axios as jest.Mocked<typeof axios>
 

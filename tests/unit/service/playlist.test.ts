@@ -67,8 +67,8 @@ describe('transformToPlaylistV3', () => {
     const sbExt: any = {
       createdOn: '2024-01-01',
       playlistTitle: 'My Playlist',
-      resource_ids: [{ appIcon: 'icon.png', duration: 10 }, { duration: 20 }],
       resourceIds: ['r1', 'r2'],
+      resource_ids: [{ appIcon: 'icon.png', duration: 10 }, { duration: 20 }],
       sharedBy: 'u1',
       status: 'Live',
       visibility: 'Private',

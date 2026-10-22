@@ -1,7 +1,7 @@
 import express from 'express'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../src/utils/env'
 import { lookerDashboard } from '../../../src/proxies_v8/lookerIntegration'
+import { CONSTANTS } from '../../../src/utils/env'
 
 function buildApp() {
   const app = express()

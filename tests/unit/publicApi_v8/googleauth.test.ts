@@ -10,10 +10,10 @@ jest.mock('../../../src/publicApi_v8/ssoUserHelper', () => ({
 
 import express from 'express'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../src/utils/env'
 import { googleAuth } from '../../../src/publicApi_v8/googleauth'
 import { getGoogleProfile } from '../../../src/publicApi_v8/googleOAuthHelper'
 import { createUserWithMailId, fetchUserByEmailId, updateKeycloakSession } from '../../../src/publicApi_v8/ssoUserHelper'
+import { CONSTANTS } from '../../../src/utils/env'
 
 const mockedGetGoogleProfile = getGoogleProfile as jest.Mock
 const mockedFetchUserByEmailId = fetchUserByEmailId as jest.Mock

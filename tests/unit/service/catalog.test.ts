@@ -4,7 +4,7 @@ jest.mock('../../../src/protectedApi_v8/content', () => ({
 
 import { IFilterUnitContent } from '../../../src/models/catalog.model'
 import { searchV5 } from '../../../src/protectedApi_v8/content'
-import { getFilterUnitByType, getFilters } from '../../../src/service/catalog'
+import { getFilters, getFilterUnitByType } from '../../../src/service/catalog'
 
 const mockedSearchV5 = searchV5 as jest.Mock
 

@@ -11,8 +11,8 @@ import express, { NextFunction, Request, Response } from 'express'
 import fileUpload from 'express-fileupload'
 import FormData from 'form-data'
 import supertest from 'supertest'
-import { CONSTANTS } from '../../../../src/utils/env'
 import { exerciseApi } from '../../../../src/protectedApi_v8/user/exercise'
+import { CONSTANTS } from '../../../../src/utils/env'
 
 const mockedAxios = axios as unknown as { get: jest.Mock; post: jest.Mock }
 
