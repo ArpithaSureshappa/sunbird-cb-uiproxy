@@ -8590,6 +8590,15 @@ export const API_LIST = {
                ROLE.SPV_ADMIN,
             ],
         },
+        '/proxies/v8/ciosIntegration/lti/deeplink/return': {
+        checksNeeded: [CHECK.ROLE],
+        // tslint:disable-next-line: object-literal-sort-keys
+            ROLE_CHECK: [
+              ROLE.SPV_ADMIN,
+              ROLE.MDO_ADMIN,
+              ROLE.CBP_ADMIN,
+        ],
+        },
 
     },
     URL_PATTERN:
@@ -9662,5 +9671,6 @@ export const API_LIST = {
             '/proxies/v8/contentpartner/v2/update',
             '/proxies/v8/contentpartner/v2/create',
             '/proxies/v8/ciosIntegration/lti/ssotest/:partnerCode',
+            '/proxies/v8/ciosIntegration/lti/deeplink/return'
         ],
 }
