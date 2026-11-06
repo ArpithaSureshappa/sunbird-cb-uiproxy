@@ -265,6 +265,9 @@ export const CONSTANTS = {
   MNRE_PORTAL_HOST: env.MNRE_PORTAL_HOST || 'https://mnre-portal.igotkarmayogi.gov.in',
   MNRE_REDIRECT_PATH: env.MNRE_REDIRECT_PATH || '/page/home',
   MNRE_DESTINATION_PORTAL_HOST: env.MNRE_DESTINATION_PORTAL_HOST || 'mnre.igotkarmayogi.gov.in',
+  SSM_PORTAL_HOST: env.SSM_PORTAL_HOST || 'https://ssm-portal.igotkarmayogi.gov.in',
+  SSM_REDIRECT_PATH: env.SSM_REDIRECT_PATH || '/page/home',
+  SSM_DESTINATION_PORTAL_HOST: env.SSM_DESTINATION_PORTAL_HOST || 'ssm.igotkarmayogi.gov.in',
 }
 
 export const RESTRICTED_PYTHON_STMT: string[] = process.env.RESTRICTED_CHARACTERS
