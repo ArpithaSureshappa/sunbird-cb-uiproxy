@@ -9671,6 +9671,6 @@ export const API_LIST = {
             '/proxies/v8/contentpartner/v2/update',
             '/proxies/v8/contentpartner/v2/create',
             '/proxies/v8/ciosIntegration/lti/ssotest/:partnerCode',
-            '/proxies/v8/ciosIntegration/lti/deeplink/return'
+            '/proxies/v8/ciosIntegration/lti/deeplink/return',
         ],
 }
